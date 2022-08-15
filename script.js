@@ -87,7 +87,7 @@ equalSign.addEventListener("click", () => {
       return (output.innerText = "Error");
     }
     let result = mathMethods.multiply(x, y);
-    return (output.innerText = Math.round(result));
+    return (output.innerText = result.toFixed(0));
   } else if (arrayOfInput[subtraction] === "-") {
     let values = output.innerText.split("-");
     x = values[0];
@@ -96,7 +96,7 @@ equalSign.addEventListener("click", () => {
       return (output.innerText = "Error");
     }
     let result = mathMethods.subtract(x, y);
-    return (output.innerText = Math.round(result));
+    return (output.innerText = result.toFixed(0));
   } else if (arrayOfInput[addition] === "+") {
     let values = output.innerText.split("+");
     x = parseInt(values[0]);
@@ -105,7 +105,7 @@ equalSign.addEventListener("click", () => {
       return (output.innerText = "Error");
     }
     let result = x + y;
-    return (output.innerText = Math.round(result));
+    return (output.innerText = result.toFixed(0));
   } else if (arrayOfInput[division] === "/") {
     let values = output.innerText.split("/");
     x = values[0];
@@ -114,7 +114,7 @@ equalSign.addEventListener("click", () => {
       return (output.innerText = "Error");
     }
     let result = mathMethods.divide(x, y);
-    return (output.innerText = Math.round(result));
+    return (output.innerText = result.toFixed(1));
   }
 });
 
