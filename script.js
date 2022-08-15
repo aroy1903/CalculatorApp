@@ -83,26 +83,38 @@ equalSign.addEventListener("click", () => {
     let values = output.innerText.split("x");
     x = values[0];
     y = values[1];
+    if (x.length > 9 || y.length > 9) {
+      return (output.innerText = "Error");
+    }
     let result = mathMethods.multiply(x, y);
-    return (output.innerText = result);
+    return (output.innerText = Math.round(result));
   } else if (arrayOfInput[subtraction] === "-") {
     let values = output.innerText.split("-");
     x = values[0];
     y = values[1];
+    if (x.length > 9 || y.length > 9) {
+      return (output.innerText = "Error");
+    }
     let result = mathMethods.subtract(x, y);
-    return (output.innerText = result);
+    return (output.innerText = Math.round(result));
   } else if (arrayOfInput[addition] === "+") {
     let values = output.innerText.split("+");
     x = parseInt(values[0]);
     y = parseInt(values[1]);
+    if (x.length > 9 || y.length > 9) {
+      return (output.innerText = "Error");
+    }
     let result = x + y;
-    return (output.innerText = result);
+    return (output.innerText = Math.round(result));
   } else if (arrayOfInput[division] === "/") {
     let values = output.innerText.split("/");
     x = values[0];
     y = values[1];
+    if (x.length > 9 || y.length > 9) {
+      return (output.innerText = "Error");
+    }
     let result = mathMethods.divide(x, y);
-    return (output.innerText = result);
+    return (output.innerText = Math.round(result));
   }
 });
 
